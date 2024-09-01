@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html{
+        font-family: "Montserrat", sans-serif;
+    }
+    body{
+        background-color: #0000;
+        background-image: url("./assets/beach-8463642.jpg");
+        height: 100vh;
+        width: 100vw;
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        display: grid;
+        place-items: center;
+    }
+    body::before{
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.3;
+        height: 100vh;
+        width: 100vw;
+    }
+} 
+
+@layer utilities{
+    .animate-spin{
+        animation: spin 20s linear infinite;
+    }
+}
+@layer components{
+    .bars{
+        @apply h-8 text-center text-white border-b-2 border-white w-52
+    }
+    .units {
+        @apply grid items-center w-10 h-10 p-1 transition-all rounded-full cursor-pointer backdrop-blur-md hover:scale-110
+    }
+   
+    }
