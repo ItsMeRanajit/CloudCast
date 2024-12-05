@@ -1,4 +1,4 @@
-const API_KEY = import.meta.env.REACT_APP_WEATHER_API; // your api key is here
+const API_KEY = process.env.WEATHER_API; // your api key is here
 const BASE_URL = "https://api.openweathermap.org/data/2.5/";
 import { DateTime } from "luxon";
 const getWeatherData = async (infotype, searchParams) => {
